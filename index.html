@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noyi Adahnu | Professional Writer & Content Strategist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Dancing+Script:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#F8D7E6',
+                        secondary: '#E2B4C5',
+                        accent: '#C87EA0',
+                        dark: '#5D2E46',
+                        light: '#FFF5F9',
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Montserrat', 'sans-serif'],
+                        script: ['Dancing Script', 'cursive'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-gradient {
+                @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-dark;
+            }
+            .section-title {
+                @apply text-3xl font-heading font-bold mb-8 text-dark relative inline-block;
+            }
+            .section-title:after {
+                content: '';
+                @apply absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-accent;
+                height: 2px;
+            }
+            .floral-divider {
+                @apply text-center my-12 text-accent opacity-60;
+            }
+            .service-card {
+                @apply bg-light p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-primary/20;
+            }
+            .skill-pill {
+                @apply bg-primary/30 text-dark px-4 py-2 rounded-full text-sm font-medium;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white font-body text-dark/90">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full bg-white/70 backdrop-blur-md shadow-md z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-dark font-heading text-2xl font-bold">
+                Noyi Adahnu
+            </a>
+            <!-- Hamburger Menu for Mobile -->
+            <button id="menu-toggle" class="md:hidden text-dark/80 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <!-- Navigation Links -->
+            <div id="menu" class="hidden md:flex space-x-6">
+                <a href="#about" class="hover:text-accent transition-colors">About</a>
+                <a href="#skills" class="hover:text-accent transition-colors">Skills</a>
+                <a href="#services" class="hover:text-accent transition-colors">Services</a>
+                <a href="#work" class="hover:text-accent transition-colors">Work</a>
+                <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div id="mobile-menu" class="md:hidden hidden fixed inset-0 z-40 bg-white/95 backdrop-blur-sm pt-20">
+        <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+            <a href="#about" class="hover:text-accent transition-colors py-2 border-b border-primary/10">About</a>
+            <a href="#skills" class="hover:text-accent transition-colors py-2 border-b border-primary/10">Skills</a>
+            <a href="#services" class="hover:text-accent transition-colors py-2 border-b border-primary/10">Services</a>
+            <a href="#work" class="hover:text-accent transition-colors py-2 border-b border-primary/10">Work</a>
+            <a href="#contact" class="hover:text-accent transition-colors py-2">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative bg-gradient-to-br from-primary/20 to-light min-h-[80vh] flex items-center overflow-hidden mt-16">
+        <!-- Decorative background elements -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-10">
+            <div class="absolute top-10 left-20 text-accent/30 text-9xl"><i class="fas fa-feather-alt"></i></div>
+            <div class="absolute bottom-20 right-20 text-accent/30 text-9xl"><i class="fas fa-pen-fancy"></i></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10 py-12 lg:py-20">
+            <div class="flex flex-col lg:flex-row items-center">
+                <!-- Left content column -->
+                <div class="max-w-2xl lg:mr-12 w-full text-center lg:text-left">
+                    <h4 class="text-accent font-medium mb-2">Professional Writer and Content Strategist</h4>
+                    <h1 class="text-5xl md:text-6xl font-heading font-bold mb-4 leading-tight">Noyi Adahnu</h1>
+                    <h2 class="text-2xl md:text-3xl font-heading italic mb-6 text-dark/80">Writing with Purpose, <span class="text-gradient">Strategizing for Impact</span></h2>
+                    <p class="text-lg mb-8 max-w-lg mx-auto lg:mx-0">Helping businesses turn ideas into impact through strategic, engaging content that connects with audiences and drives results.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contact" class="bg-accent hover:bg-dark text-white px-6 py-3 rounded-full font-medium transition-all">Let's Connect</a>
+                        <a href="#work" class="border-2 border-accent text-accent hover:bg-accent/10 px-6 py-3 rounded-full font-medium transition-all">View My Work</a>
+                    </div>
+                </div>
+                
+                <!-- Right illustration - desktop only -->
+                <div class="hidden lg:block flex-1 w-full mt-12 lg:mt-0">
+                    <div class="relative max-w-md mx-auto">
+                        <img src="undraw_book-writer_ri5u.svg" alt="Professional Writing Illustration" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-light">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">About Me</h2>
+            
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <div class="w-full h-full bg-accent/10 absolute -bottom-4 -right-4 rounded-lg"></div>
+                        <img src="noyi.jpg" alt="Noyi Adahnu" class="relative rounded-lg w-full max-w-lg z-10 shadow-lg">
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <p class="text-xl font-medium mb-6">I'm Noyi—a content strategist and writer who helps businesses turn ideas into impact. My approach blends creativity with structure, so every piece of content is not only engaging but also aligned with your business goals.</p>
+                    
+                    <p class="mb-4">I've written for finance, SaaS, tech, and lifestyle brands—developing strategies, writing blogs, crafting website copy, and building full content systems from scratch. But more than anything, I help people say what they mean, clearly and confidently.</p>
+                    
+                    <p>Whether you're building thought leadership, launching a product, or growing your digital presence, I bring clarity, direction, and strong writing that speaks to the right people.</p>
+                    
+                    <div class="mt-8 flex gap-4">
+                        <div class="text-center">
+                            <div class="text-4xl text-accent font-heading font-bold">50+</div>
+                            <div class="text-sm">Clients Served</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl text-accent font-heading font-bold">300+</div>
+                            <div class="text-sm">Projects Completed</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl text-accent font-heading font-bold">100%</div>
+                            <div class="text-sm">Client Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">My Skills</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="skill-pill flex items-center gap-2">
+                    <i class="fas fa-pen-fancy text-accent"></i>
+                    Blog and article writing
+                </div>
+                <div class="skill-pill flex items-center gap-2">
+                    <i class="fas fa-search text-accent"></i>
+                    SEO writing and optimization
+                </div>
+                <div class="skill-pill flex items-center gap-2">
+                    <i class="fas fa-globe text-accent"></i>
+                    Website and landing page copy
+                </div>
+                <div class="skill-pill flex items-center gap-2">
+                    <i class="fas fa-envelope text-accent"></i>
+                    Email copywriting
+                </div>
+                <div class="skill-pill flex items-center gap-2">
+                    <i class="fas fa-chess text-accent"></i>
+                    Content strategy and planning
+                </div>
+                <div class="skill-pill flex items-center gap-2">
+                    <i class="fas fa-microphone text-accent"></i>
+                    Brand voice development
+                </div>
+                <div class="skill-pill flex items-center gap-2">
+                    <i class="fas fa-calendar-alt text-accent"></i>
+                    Content calendar creation
+                </div>
+                <div class="skill-pill flex items-center gap-2">
+                    <i class="fas fa-ghost text-accent"></i>
+                    Ghostwriting
+                </div>
+                <div class="skill-pill flex items-center gap-2">
+                    <i class="fas fa-hashtag text-accent"></i>
+                    Social media content
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floral divider -->
+    <div class="floral-divider">
+        <i class="fas fa-leaf text-4xl rotate-45"></i>
+        <i class="fas fa-spa text-4xl mx-8"></i>
+        <i class="fas fa-leaf text-4xl -rotate-45"></i>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-light">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">My Services</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="text-accent text-4xl mb-4">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-3">Content Writing</h3>
+                    <p class="mb-4">I write well-researched, clear, and valuable blog posts and articles. Every piece is written with the reader in mind and tailored to your voice and goals.</p>
+                    <div class="text-accent font-medium flex items-center gap-2">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="text-accent text-4xl mb-4">
+                        <i class="fas fa-chess-queen"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-3">Content Strategy</h3>
+                    <p class="mb-4">I help you decide what to say, how to say it, and when to say it. From content calendars to messaging direction, I bring structure to your content efforts.</p>
+                    <div class="text-accent font-medium flex items-center gap-2">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="text-accent text-4xl mb-4">
+                        <i class="fas fa-copy"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-3">Copywriting</h3>
+                    <p class="mb-4">From website pages to email sequences and product descriptions, I write persuasive and engaging copy that reflects your brand and supports your goals.</p>
+                    <div class="text-accent font-medium flex items-center gap-2">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="text-accent text-4xl mb-4">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-3">Social Media Content</h3>
+                    <p class="mb-4">I create content for platforms like LinkedIn and Instagram that aligns with your tone, builds consistency, and keeps your audience engaged.</p>
+                    <div class="text-accent font-medium flex items-center gap-2">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="text-accent text-4xl mb-4">
+                        <i class="fas fa-ghost"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-3">Ghostwriting</h3>
+                    <p class="mb-4">Need content in your voice but don't have time to write? I'll capture your unique perspective and deliver polished pieces ready to publish under your name.</p>
+                    <div class="text-accent font-medium flex items-center gap-2">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="text-accent text-4xl mb-4">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-3">Content Audit</h3>
+                    <p class="mb-4">I'll review your existing content, identify gaps and opportunities, and provide a roadmap to improve performance and alignment with your goals.</p>
+                    <div class="text-accent font-medium flex items-center gap-2">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What I Offer Section -->
+    <section id="offer" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">What I Offer</h2>
+            
+            <p class="text-xl max-w-3xl mx-auto text-center mb-12">You're not just hiring a writer—you're gaining a partner who's invested in your brand's growth. Here's what I bring to every project:</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-primary/10 p-6 rounded-lg border border-primary/20">
+                    <div class="text-accent text-2xl mb-3">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                    <h3 class="font-heading font-bold mb-2">Clean, Structured Writing</h3>
+                    <p>Easy to read, on-brand, and tailored to your goals</p>
+                </div>
+                
+                <div class="bg-primary/10 p-6 rounded-lg border border-primary/20">
+                    <div class="text-accent text-2xl mb-3">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="font-heading font-bold mb-2">Research-Backed Content</h3>
+                    <p>Adds credibility and connects with your target audience</p>
+                </div>
+                
+                <div class="bg-primary/10 p-6 rounded-lg border border-primary/20">
+                    <div class="text-accent text-2xl mb-3">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="font-heading font-bold mb-2">Clarity & Consistency</h3>
+                    <p>In messaging across blogs, websites, emails, and social posts</p>
+                </div>
+                
+                <div class="bg-primary/10 p-6 rounded-lg border border-primary/20">
+                    <div class="text-accent text-2xl mb-3">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 class="font-heading font-bold mb-2">Smooth Process</h3>
+                    <p>Organized workflow with clear communication and timely delivery</p>
+                </div>
+                
+                <div class="bg-primary/10 p-6 rounded-lg border border-primary/20">
+                    <div class="text-accent text-2xl mb-3">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="font-heading font-bold mb-2">Strategic Support</h3>
+                    <p>Content planning, idea development, and editorial structure</p>
+                </div>
+                
+                <div class="bg-primary/10 p-6 rounded-lg border border-primary/20">
+                    <div class="text-accent text-2xl mb-3">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="font-heading font-bold mb-2">Reliable Collaboration</h3>
+                    <p>Saves you time and helps you stay focused on the bigger picture</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-gradient-to-r from-primary to-accent/10 p-8 rounded-lg border border-accent/20">
+                <p class="text-xl font-heading italic text-center">My goal is always the same: to help you build trust, speak with purpose, and grow with content that works.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Samples Section -->
+    <section id="work" class="py-20 bg-light">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Writing Samples</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Finance -->
+                <div class="group relative overflow-hidden rounded-lg shadow-md h-64">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1011&q=80" alt="Finance" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent flex items-end p-6">
+                        <div>
+                            <h3 class="text-white font-heading text-2xl font-bold">Finance</h3>
+                            <div class="flex gap-2 mt-2">
+                                <span class="bg-accent/90 text-white text-xs px-2 py-1 rounded">Blog Posts</span>
+                                <span class="bg-accent/90 text-white text-xs px-2 py-1 rounded">Whitepapers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- SaaS -->
+                <div class="group relative overflow-hidden rounded-lg shadow-md h-64">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="SaaS" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent flex items-end p-6">
+                        <div>
+                            <h3 class="text-white font-heading text-2xl font-bold">SaaS</h3>
+                            <div class="flex gap-2 mt-2">
+                                <span class="bg-accent/90 text-white text-xs px-2 py-1 rounded">Product Copy</span>
+                                <span class="bg-accent/90 text-white text-xs px-2 py-1 rounded">Case Studies</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tech -->
+                <div class="group relative overflow-hidden rounded-lg shadow-md h-64">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Tech" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent flex items-end p-6">
+                        <div>
+                            <h3 class="text-white font-heading text-2xl font-bold">Tech</h3>
+                            <div class="flex gap-2 mt-2">
+                                <span class="bg-accent/90 text-white text-xs px-2 py-1 rounded">Explainer Guides</span>
+                                <span class="bg-accent/90 text-white text-xs px-2 py-1 rounded">Technical Writing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Lifestyle -->
+                <div class="group relative overflow-hidden rounded-lg shadow-md h-64">
+                    <img src="https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Lifestyle" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent flex items-end p-6">
+                        <div>
+                            <h3 class="text-white font-heading text-2xl font-bold">Home & Lifestyle</h3>
+                            <div class="flex gap-2 mt-2">
+                                <span class="bg-accent/90 text-white text-xs px-2 py-1 rounded">Blog Posts</span>
+                                <span class="bg-accent/90 text-white text-xs px-2 py-1 rounded">Email Campaigns</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-white p-8 rounded-lg shadow-md border border-primary/20">
+                <h3 class="font-heading text-2xl font-bold mb-4 text-dark">Content Calendar Sample</h3>
+                <p class="mb-4">For a client preparing to launch, I built a 30-day content calendar covering blog topics, product content, and social media. It gave the client a clear roadmap, helped them stay consistent, and saved time across their team.</p>
+                <p class="font-medium">I work with tools like Google Docs, Google Trends, Google Analytics, Grammarly, Canva, Trello, and Google Sheets depending on what works best for your workflow.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Me -->
+    <section id="why" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Why Choose Me</h2>
+            
+            <p class="text-xl max-w-3xl mx-auto text-center mb-12">Working with me means less stress and more results. Here's what I bring to our collaboration:</p>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="flex gap-4">
+                    <div class="text-accent text-2xl mt-1">
+                        <i class="fas fa-chess-queen"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold mb-2">Strategy-First Approach</h3>
+                        <p>I focus on strategy, not just words. Every piece of content serves a purpose in your broader business goals.</p>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4">
+                    <div class="text-accent text-2xl mt-1">
+                        <i class="fas fa-chameleon"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold mb-2">Brand Adaptability</h3>
+                        <p>I adapt quickly to your brand and tone, ensuring consistency across all content.</p>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4">
+                    <div class="text-accent text-2xl mt-1">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold mb-2">Reliable Deadlines</h3>
+                        <p>I meet deadlines without excuses, keeping your content pipeline flowing smoothly.</p>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4">
+                    <div class="text-accent text-2xl mt-1">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold mb-2">Clarity & Structure</h3>
+                        <p>I bring clarity to your ideas and structure to your content, making complex topics accessible.</p>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4">
+                    <div class="text-accent text-2xl mt-1">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold mb-2">Quality Commitment</h3>
+                        <p>I care about doing things right, not just getting them done. Your reputation is my priority.</p>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4">
+                    <div class="text-accent text-2xl mt-1">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold mb-2">Clear Communication</h3>
+                        <p>I keep communication simple and professional, so you're always in the loop.</p>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4">
+                    <div class="text-accent text-2xl mt-1">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold mb-2">Ownership</h3>
+                        <p>I take ownership of every task, so you don't have to follow up twice.</p>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4">
+                    <div class="text-accent text-2xl mt-1">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold mb-2">Stress-Free Process</h3>
+                        <p>I'm here to make your content process easier, not harder, and help you produce work that actually moves the needle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-light">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Let's Connect</h2>
+            
+            <p class="text-xl max-w-3xl mx-auto text-center mb-12">If you need content that's purposeful, clear, and handled professionally from start to finish—I'd love to work with you.</p>
+            
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md border border-primary/20">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="font-heading text-xl font-bold mb-4">Contact Information</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex gap-4 items-start">
+                                <div class="text-accent text-xl mt-1">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">Email</div>
+                                    <a href="mailto:enduranceadahnu@gmail.com" class="text-dark/80 hover:text-accent transition-colors">enduranceadahnu@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex gap-4 items-start">
+                                <div class="text-accent text-xl mt-1">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">LinkedIn</div>
+                                    <a href="https://www.linkedin.com/in/noyiadahnuthewriter" target="_blank" class="text-dark/80 hover:text-accent transition-colors">linkedin.com/in/noyiadahnuthewriter</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex gap-4 items-start">
+                                <div class="text-accent text-xl mt-1">
+                                    <i class="fas fa-calendar-check"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">Availability</div>
+                                    <div class="text-dark/80">Open to both one-time and long-term projects</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-heading text-xl font-bold mb-4">Send Me a Message</h3>
+                        
+                        <form id="contact-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-1">Your Name</label>
+                                <input type="text" id="name" required class="w-full px-4 py-2 rounded-lg border border-primary/30 focus:border-accent focus:ring-1 focus:ring-accent/50 transition-all">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-1">Email Address</label>
+                                <input type="email" id="email" required class="w-full px-4 py-2 rounded-lg border border-primary/30 focus:border-accent focus:ring-1 focus:ring-accent/50 transition-all">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium mb-1">Message</label>
+                                <textarea id="message" rows="4" required class="w-full px-4 py-2 rounded-lg border border-primary/30 focus:border-accent focus:ring-1 focus:ring-accent/50 transition-all"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="bg-accent hover:bg-dark text-white px-6 py-3 rounded-full font-medium transition-all w-full">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="text-2xl font-heading font-bold mb-2">Noyi Adahnu</div>
+                    <div class="text-primary/80">Professional Writer & Content Strategist</div>
+                </div>
+                
+                <div class="flex gap-6">
+                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="text-primary/80 hover:text-white hover:scale-110 transition-all duration-300 text-xl">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-primary/80 hover:text-white hover:scale-110 transition-all duration-300 text-xl">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-primary/80 hover:text-white hover:scale-110 transition-all duration-300 text-xl">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-primary/20 mt-8 pt-8">
+                <div class="flex justify-center items-center gap-4 mb-4">
+                    <!-- Additional Social Icons -->
+                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="text-primary/60 hover:text-accent transition-colors duration-300">
+                        <i class="fab fa-linkedin-in text-lg"></i>
+                    </a>
+                    <a href="#" class="text-primary/60 hover:text-accent transition-colors duration-300">
+                        <i class="fab fa-twitter text-lg"></i>
+                    </a>
+                    <a href="#" class="text-primary/60 hover:text-accent transition-colors duration-300">
+                        <i class="fab fa-instagram text-lg"></i>
+                    </a>
+                </div>
+                
+                <div class="text-primary/60 text-sm mb-2 text-center">
+                    &copy; 2025 Noyi Adahnu. All rights reserved.
+                </div>
+                
+                <div class="text-primary/80 text-sm font-medium text-center">
+                    Designed and Developed by 
+                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="text-accent hover:text-white transition-colors duration-300 inline-flex items-center">
+                        <i class="fab fa-linkedin-in mr-1 ml-2"></i> Esa Kris
+                    </a>
+                </div>
+                
+                <!-- Floral decoration -->
+                <div class="flex justify-center mt-4 text-primary/40">
+                    <i class="fas fa-leaf text-xs rotate-45 mx-1"></i>
+                    <i class="fas fa-spa text-xs mx-1"></i>
+                    <i class="fas fa-leaf text-xs -rotate-45 mx-1"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form submission
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Here you would typically send the form data to a server
+            alert('Thank you for your message! I will get back to you soon.');
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
