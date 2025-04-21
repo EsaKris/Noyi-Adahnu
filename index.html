@@ -3,12 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
     <title>Noyi Adahnu | Professional Writer & Content Strategist</title>
+    <meta name="title" content="Noyi Adahnu | Professional Writer & Content Strategist">
+    <meta name="description" content="Professional content writer and strategist helping businesses create impactful content. Specializing in blog writing, SEO content, website copy, and content strategy.">
+    <meta name="keywords" content="content writer, content strategist, SEO writer, blog writer, copywriter, ghostwriter, content marketing">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://noyiadahnu.com/">
+    <meta property="og:title" content="Noyi Adahnu | Professional Writer & Content Strategist">
+    <meta property="og:description" content="Professional content writer and strategist helping businesses create impactful content. Specializing in blog writing, SEO content, website copy, and content strategy.">
+    <meta property="og:image" content="https://noyiadahnu.com/images/social-preview.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://noyiadahnu.com/">
+    <meta property="twitter:title" content="Noyi Adahnu | Professional Writer & Content Strategist">
+    <meta property="twitter:description" content="Professional content writer and strategist helping businesses create impactful content. Specializing in blog writing, SEO content, website copy, and content strategy.">
+    <meta property="twitter:image" content="https://noyiadahnu.com/images/social-preview.jpg">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5d2e46">
+    <meta name="msapplication-TileColor" content="#5d2e46">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://noyiadahnu.com/">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Noyi Adahnu",
+      "jobTitle": "Professional Writer & Content Strategist",
+      "url": "https://noyiadahnu.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/noyiadahnuthewriter"
+      ],
+      "description": "Professional content writer and strategist helping businesses create impactful content.",
+      "image": "https://noyiadahnu.com/images/noyi.jpg"
+    }
+    </script>
+    
+    <!-- CSS and Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Dancing+Script:wght@400;500&display=swap" rel="stylesheet">
+    
     <script>
         tailwind.config = {
             theme: {
@@ -58,12 +108,12 @@
     <!-- Navbar -->
     <nav class="fixed top-0 left-0 w-full bg-white/70 backdrop-blur-md shadow-md z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- Logo -->
+            <!-- Logo with semantic h1 for SEO -->
             <a href="#" class="text-dark font-heading text-2xl font-bold">
-                Noyi Adahnu
+                <h1>Noyi Adahnu</h1>
             </a>
             <!-- Hamburger Menu for Mobile -->
-            <button id="menu-toggle" class="md:hidden text-dark/80 focus:outline-none">
+            <button id="menu-toggle" class="md:hidden text-dark/80 focus:outline-none" aria-label="Toggle menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -93,7 +143,7 @@
     <!-- Hero Section -->
     <header class="relative bg-gradient-to-br from-primary/20 to-light min-h-[80vh] flex items-center overflow-hidden mt-16">
         <!-- Decorative background elements -->
-        <div class="absolute top-0 left-0 w-full h-full opacity-10">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10" aria-hidden="true">
             <div class="absolute top-10 left-20 text-accent/30 text-9xl"><i class="fas fa-feather-alt"></i></div>
             <div class="absolute bottom-20 right-20 text-accent/30 text-9xl"><i class="fas fa-pen-fancy"></i></div>
         </div>
@@ -103,8 +153,8 @@
                 <!-- Left content column -->
                 <div class="max-w-2xl lg:mr-12 w-full text-center lg:text-left">
                     <h4 class="text-accent font-medium mb-2">Professional Writer and Content Strategist</h4>
-                    <h1 class="text-5xl md:text-6xl font-heading font-bold mb-4 leading-tight">Noyi Adahnu</h1>
-                    <h2 class="text-2xl md:text-3xl font-heading italic mb-6 text-dark/80">Writing with Purpose, <span class="text-gradient">Strategizing for Impact</span></h2>
+                    <h2 class="text-5xl md:text-6xl font-heading font-bold mb-4 leading-tight">Noyi Adahnu</h2>
+                    <h3 class="text-2xl md:text-3xl font-heading italic mb-6 text-dark/80">Writing with Purpose, <span class="text-gradient">Strategizing for Impact</span></h3>
                     <p class="text-lg mb-8 max-w-lg mx-auto lg:mx-0">Helping businesses turn ideas into impact through strategic, engaging content that connects with audiences and drives results.</p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                         <a href="#contact" class="bg-accent hover:bg-dark text-white px-6 py-3 rounded-full font-medium transition-all">Let's Connect</a>
@@ -131,8 +181,8 @@
             <div class="flex flex-col lg:flex-row gap-12 items-center">
                 <div class="lg:w-1/2">
                     <div class="relative">
-                        <div class="w-full h-full bg-accent/10 absolute -bottom-4 -right-4 rounded-lg"></div>
-                        <img src="noyi.jpg" alt="Noyi Adahnu" class="relative rounded-lg w-full max-w-lg z-10 shadow-lg">
+                        <div class="w-full h-full bg-accent/10 absolute -bottom-4 -right-4 rounded-lg" aria-hidden="true"></div>
+                        <img src="noyi.jpg" alt="Noyi Adahnu - Professional Writer and Content Strategist" class="relative rounded-lg w-full max-w-lg z-10 shadow-lg">
                     </div>
                 </div>
                 
@@ -169,39 +219,39 @@
             
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 <div class="skill-pill flex items-center gap-2">
-                    <i class="fas fa-pen-fancy text-accent"></i>
+                    <i class="fas fa-pen-fancy text-accent" aria-hidden="true"></i>
                     Blog and article writing
                 </div>
                 <div class="skill-pill flex items-center gap-2">
-                    <i class="fas fa-search text-accent"></i>
+                    <i class="fas fa-search text-accent" aria-hidden="true"></i>
                     SEO writing and optimization
                 </div>
                 <div class="skill-pill flex items-center gap-2">
-                    <i class="fas fa-globe text-accent"></i>
+                    <i class="fas fa-globe text-accent" aria-hidden="true"></i>
                     Website and landing page copy
                 </div>
                 <div class="skill-pill flex items-center gap-2">
-                    <i class="fas fa-envelope text-accent"></i>
+                    <i class="fas fa-envelope text-accent" aria-hidden="true"></i>
                     Email copywriting
                 </div>
                 <div class="skill-pill flex items-center gap-2">
-                    <i class="fas fa-chess text-accent"></i>
+                    <i class="fas fa-chess text-accent" aria-hidden="true"></i>
                     Content strategy and planning
                 </div>
                 <div class="skill-pill flex items-center gap-2">
-                    <i class="fas fa-microphone text-accent"></i>
+                    <i class="fas fa-microphone text-accent" aria-hidden="true"></i>
                     Brand voice development
                 </div>
                 <div class="skill-pill flex items-center gap-2">
-                    <i class="fas fa-calendar-alt text-accent"></i>
+                    <i class="fas fa-calendar-alt text-accent" aria-hidden="true"></i>
                     Content calendar creation
                 </div>
                 <div class="skill-pill flex items-center gap-2">
-                    <i class="fas fa-ghost text-accent"></i>
+                    <i class="fas fa-ghost text-accent" aria-hidden="true"></i>
                     Ghostwriting
                 </div>
                 <div class="skill-pill flex items-center gap-2">
-                    <i class="fas fa-hashtag text-accent"></i>
+                    <i class="fas fa-hashtag text-accent" aria-hidden="true"></i>
                     Social media content
                 </div>
             </div>
@@ -209,7 +259,7 @@
     </section>
 
     <!-- Floral divider -->
-    <div class="floral-divider">
+    <div class="floral-divider" aria-hidden="true">
         <i class="fas fa-leaf text-4xl rotate-45"></i>
         <i class="fas fa-spa text-4xl mx-8"></i>
         <i class="fas fa-leaf text-4xl -rotate-45"></i>
@@ -222,76 +272,76 @@
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="service-card">
+                <article class="service-card">
                     <div class="text-accent text-4xl mb-4">
-                        <i class="fas fa-newspaper"></i>
+                        <i class="fas fa-newspaper" aria-hidden="true"></i>
                     </div>
                     <h3 class="text-xl font-heading font-bold mb-3">Content Writing</h3>
                     <p class="mb-4">I write well-researched, clear, and valuable blog posts and articles. Every piece is written with the reader in mind and tailored to your voice and goals.</p>
                     <div class="text-accent font-medium flex items-center gap-2">
-                        Learn more <i class="fas fa-arrow-right"></i>
+                        Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i>
                     </div>
-                </div>
+                </article>
                 
                 <!-- Service 2 -->
-                <div class="service-card">
+                <article class="service-card">
                     <div class="text-accent text-4xl mb-4">
-                        <i class="fas fa-chess-queen"></i>
+                        <i class="fas fa-chess-queen" aria-hidden="true"></i>
                     </div>
                     <h3 class="text-xl font-heading font-bold mb-3">Content Strategy</h3>
                     <p class="mb-4">I help you decide what to say, how to say it, and when to say it. From content calendars to messaging direction, I bring structure to your content efforts.</p>
                     <div class="text-accent font-medium flex items-center gap-2">
-                        Learn more <i class="fas fa-arrow-right"></i>
+                        Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i>
                     </div>
-                </div>
+                </article>
                 
                 <!-- Service 3 -->
-                <div class="service-card">
+                <article class="service-card">
                     <div class="text-accent text-4xl mb-4">
-                        <i class="fas fa-copy"></i>
+                        <i class="fas fa-copy" aria-hidden="true"></i>
                     </div>
                     <h3 class="text-xl font-heading font-bold mb-3">Copywriting</h3>
                     <p class="mb-4">From website pages to email sequences and product descriptions, I write persuasive and engaging copy that reflects your brand and supports your goals.</p>
                     <div class="text-accent font-medium flex items-center gap-2">
-                        Learn more <i class="fas fa-arrow-right"></i>
+                        Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i>
                     </div>
-                </div>
+                </article>
                 
                 <!-- Service 4 -->
-                <div class="service-card">
+                <article class="service-card">
                     <div class="text-accent text-4xl mb-4">
-                        <i class="fas fa-hashtag"></i>
+                        <i class="fas fa-hashtag" aria-hidden="true"></i>
                     </div>
                     <h3 class="text-xl font-heading font-bold mb-3">Social Media Content</h3>
                     <p class="mb-4">I create content for platforms like LinkedIn and Instagram that aligns with your tone, builds consistency, and keeps your audience engaged.</p>
                     <div class="text-accent font-medium flex items-center gap-2">
-                        Learn more <i class="fas fa-arrow-right"></i>
+                        Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i>
                     </div>
-                </div>
+                </article>
                 
                 <!-- Service 5 -->
-                <div class="service-card">
+                <article class="service-card">
                     <div class="text-accent text-4xl mb-4">
-                        <i class="fas fa-ghost"></i>
+                        <i class="fas fa-ghost" aria-hidden="true"></i>
                     </div>
                     <h3 class="text-xl font-heading font-bold mb-3">Ghostwriting</h3>
                     <p class="mb-4">Need content in your voice but don't have time to write? I'll capture your unique perspective and deliver polished pieces ready to publish under your name.</p>
                     <div class="text-accent font-medium flex items-center gap-2">
-                        Learn more <i class="fas fa-arrow-right"></i>
+                        Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i>
                     </div>
-                </div>
+                </article>
                 
                 <!-- Service 6 -->
-                <div class="service-card">
+                <article class="service-card">
                     <div class="text-accent text-4xl mb-4">
-                        <i class="fas fa-edit"></i>
+                        <i class="fas fa-edit" aria-hidden="true"></i>
                     </div>
                     <h3 class="text-xl font-heading font-bold mb-3">Content Audit</h3>
                     <p class="mb-4">I'll review your existing content, identify gaps and opportunities, and provide a roadmap to improve performance and alignment with your goals.</p>
                     <div class="text-accent font-medium flex items-center gap-2">
-                        Learn more <i class="fas fa-arrow-right"></i>
+                        Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
@@ -306,7 +356,7 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-primary/10 p-6 rounded-lg border border-primary/20">
                     <div class="text-accent text-2xl mb-3">
-                        <i class="fas fa-pen-nib"></i>
+                        <i class="fas fa-pen-nib" aria-hidden="true"></i>
                     </div>
                     <h3 class="font-heading font-bold mb-2">Clean, Structured Writing</h3>
                     <p>Easy to read, on-brand, and tailored to your goals</p>
@@ -314,7 +364,7 @@
                 
                 <div class="bg-primary/10 p-6 rounded-lg border border-primary/20">
                     <div class="text-accent text-2xl mb-3">
-                        <i class="fas fa-search"></i>
+                        <i class="fas fa-search" aria-hidden="true"></i>
                     </div>
                     <h3 class="font-heading font-bold mb-2">Research-Backed Content</h3>
                     <p>Adds credibility and connects with your target audience</p>
@@ -322,7 +372,7 @@
                 
                 <div class="bg-primary/10 p-6 rounded-lg border border-primary/20">
                     <div class="text-accent text-2xl mb-3">
-                        <i class="fas fa-bullseye"></i>
+                        <i class="fas fa-bullseye" aria-hidden="true"></i>
                     </div>
                     <h3 class="font-heading font-bold mb-2">Clarity & Consistency</h3>
                     <p>In messaging across blogs, websites, emails, and social posts</p>
@@ -330,7 +380,7 @@
                 
                 <div class="bg-primary/10 p-6 rounded-lg border border-primary/20">
                     <div class="text-accent text-2xl mb-3">
-                        <i class="fas fa-tasks"></i>
+                        <i class="fas fa-tasks" aria-hidden="true"></i>
                     </div>
                     <h3 class="font-heading font-bold mb-2">Smooth Process</h3>
                     <p>Organized workflow with clear communication and timely delivery</p>
@@ -338,7 +388,7 @@
                 
                 <div class="bg-primary/10 p-6 rounded-lg border border-primary/20">
                     <div class="text-accent text-2xl mb-3">
-                        <i class="fas fa-lightbulb"></i>
+                        <i class="fas fa-lightbulb" aria-hidden="true"></i>
                     </div>
                     <h3 class="font-heading font-bold mb-2">Strategic Support</h3>
                     <p>Content planning, idea development, and editorial structure</p>
@@ -346,7 +396,7 @@
                 
                 <div class="bg-primary/10 p-6 rounded-lg border border-primary/20">
                     <div class="text-accent text-2xl mb-3">
-                        <i class="fas fa-hands-helping"></i>
+                        <i class="fas fa-hands-helping" aria-hidden="true"></i>
                     </div>
                     <h3 class="font-heading font-bold mb-2">Reliable Collaboration</h3>
                     <p>Saves you time and helps you stay focused on the bigger picture</p>
@@ -366,8 +416,8 @@
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Finance -->
-                <div class="group relative overflow-hidden rounded-lg shadow-md h-64">
-                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1011&q=80" alt="Finance" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <article class="group relative overflow-hidden rounded-lg shadow-md h-64">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1011&q=80" alt="Finance writing samples by Noyi Adahnu" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent flex items-end p-6">
                         <div>
                             <h3 class="text-white font-heading text-2xl font-bold">Finance</h3>
@@ -377,11 +427,11 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </article>
                 
                 <!-- SaaS -->
-                <div class="group relative overflow-hidden rounded-lg shadow-md h-64">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="SaaS" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <article class="group relative overflow-hidden rounded-lg shadow-md h-64">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="SaaS writing samples by Noyi Adahnu" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent flex items-end p-6">
                         <div>
                             <h3 class="text-white font-heading text-2xl font-bold">SaaS</h3>
@@ -391,11 +441,11 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </article>
                 
                 <!-- Tech -->
-                <div class="group relative overflow-hidden rounded-lg shadow-md h-64">
-                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Tech" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <article class="group relative overflow-hidden rounded-lg shadow-md h-64">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Technology writing samples by Noyi Adahnu" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent flex items-end p-6">
                         <div>
                             <h3 class="text-white font-heading text-2xl font-bold">Tech</h3>
@@ -405,11 +455,11 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </article>
                 
                 <!-- Lifestyle -->
-                <div class="group relative overflow-hidden rounded-lg shadow-md h-64">
-                    <img src="https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Lifestyle" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <article class="group relative overflow-hidden rounded-lg shadow-md h-64">
+                    <img src="https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Lifestyle writing samples by Noyi Adahnu" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent flex items-end p-6">
                         <div>
                             <h3 class="text-white font-heading text-2xl font-bold">Home & Lifestyle</h3>
@@ -419,7 +469,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
             
             <div class="mt-12 bg-white p-8 rounded-lg shadow-md border border-primary/20">
@@ -440,7 +490,7 @@
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="flex gap-4">
                     <div class="text-accent text-2xl mt-1">
-                        <i class="fas fa-chess-queen"></i>
+                        <i class="fas fa-chess-queen" aria-hidden="true"></i>
                     </div>
                     <div>
                         <h3 class="font-heading font-bold mb-2">Strategy-First Approach</h3>
@@ -450,7 +500,7 @@
                 
                 <div class="flex gap-4">
                     <div class="text-accent text-2xl mt-1">
-                        <i class="fas fa-chameleon"></i>
+                        <i class="fas fa-chameleon" aria-hidden="true"></i>
                     </div>
                     <div>
                         <h3 class="font-heading font-bold mb-2">Brand Adaptability</h3>
@@ -460,7 +510,7 @@
                 
                 <div class="flex gap-4">
                     <div class="text-accent text-2xl mt-1">
-                        <i class="fas fa-clock"></i>
+                        <i class="fas fa-clock" aria-hidden="true"></i>
                     </div>
                     <div>
                         <h3 class="font-heading font-bold mb-2">Reliable Deadlines</h3>
@@ -470,7 +520,7 @@
                 
                 <div class="flex gap-4">
                     <div class="text-accent text-2xl mt-1">
-                        <i class="fas fa-lightbulb"></i>
+                        <i class="fas fa-lightbulb" aria-hidden="true"></i>
                     </div>
                     <div>
                         <h3 class="font-heading font-bold mb-2">Clarity & Structure</h3>
@@ -480,7 +530,7 @@
                 
                 <div class="flex gap-4">
                     <div class="text-accent text-2xl mt-1">
-                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart" aria-hidden="true"></i>
                     </div>
                     <div>
                         <h3 class="font-heading font-bold mb-2">Quality Commitment</h3>
@@ -490,7 +540,7 @@
                 
                 <div class="flex gap-4">
                     <div class="text-accent text-2xl mt-1">
-                        <i class="fas fa-comments"></i>
+                        <i class="fas fa-comments" aria-hidden="true"></i>
                     </div>
                     <div>
                         <h3 class="font-heading font-bold mb-2">Clear Communication</h3>
@@ -500,7 +550,7 @@
                 
                 <div class="flex gap-4">
                     <div class="text-accent text-2xl mt-1">
-                        <i class="fas fa-user-shield"></i>
+                        <i class="fas fa-user-shield" aria-hidden="true"></i>
                     </div>
                     <div>
                         <h3 class="font-heading font-bold mb-2">Ownership</h3>
@@ -510,7 +560,7 @@
                 
                 <div class="flex gap-4">
                     <div class="text-accent text-2xl mt-1">
-                        <i class="fas fa-hand-holding-heart"></i>
+                        <i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
                     </div>
                     <div>
                         <h3 class="font-heading font-bold mb-2">Stress-Free Process</h3>
@@ -536,7 +586,7 @@
                         <div class="space-y-4">
                             <div class="flex gap-4 items-start">
                                 <div class="text-accent text-xl mt-1">
-                                    <i class="fas fa-envelope"></i>
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
                                 </div>
                                 <div>
                                     <div class="font-medium">Email</div>
@@ -546,17 +596,17 @@
                             
                             <div class="flex gap-4 items-start">
                                 <div class="text-accent text-xl mt-1">
-                                    <i class="fab fa-linkedin"></i>
+                                    <i class="fab fa-linkedin" aria-hidden="true"></i>
                                 </div>
                                 <div>
                                     <div class="font-medium">LinkedIn</div>
-                                    <a href="https://www.linkedin.com/in/noyiadahnuthewriter" target="_blank" class="text-dark/80 hover:text-accent transition-colors">linkedin.com/in/noyiadahnuthewriter</a>
+                                    <a href="https://www.linkedin.com/in/noyiadahnuthewriter" target="_blank" rel="noopener noreferrer" class="text-dark/80 hover:text-accent transition-colors">linkedin.com/in/noyiadahnuthewriter</a>
                                 </div>
                             </div>
                             
                             <div class="flex gap-4 items-start">
                                 <div class="text-accent text-xl mt-1">
-                                    <i class="fas fa-calendar-check"></i>
+                                    <i class="fas fa-calendar-check" aria-hidden="true"></i>
                                 </div>
                                 <div>
                                     <div class="font-medium">Availability</div>
@@ -572,17 +622,17 @@
                         <form id="contact-form" class="space-y-4">
                             <div>
                                 <label for="name" class="block text-sm font-medium mb-1">Your Name</label>
-                                <input type="text" id="name" required class="w-full px-4 py-2 rounded-lg border border-primary/30 focus:border-accent focus:ring-1 focus:ring-accent/50 transition-all">
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded-lg border border-primary/30 focus:border-accent focus:ring-1 focus:ring-accent/50 transition-all">
                             </div>
                             
                             <div>
                                 <label for="email" class="block text-sm font-medium mb-1">Email Address</label>
-                                <input type="email" id="email" required class="w-full px-4 py-2 rounded-lg border border-primary/30 focus:border-accent focus:ring-1 focus:ring-accent/50 transition-all">
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded-lg border border-primary/30 focus:border-accent focus:ring-1 focus:ring-accent/50 transition-all">
                             </div>
                             
                             <div>
                                 <label for="message" class="block text-sm font-medium mb-1">Message</label>
-                                <textarea id="message" rows="4" required class="w-full px-4 py-2 rounded-lg border border-primary/30 focus:border-accent focus:ring-1 focus:ring-accent/50 transition-all"></textarea>
+                                <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 rounded-lg border border-primary/30 focus:border-accent focus:ring-1 focus:ring-accent/50 transition-all"></textarea>
                             </div>
                             
                             <button type="submit" class="bg-accent hover:bg-dark text-white px-6 py-3 rounded-full font-medium transition-all w-full">
@@ -605,13 +655,13 @@
                 </div>
                 
                 <div class="flex gap-6">
-                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="text-primary/80 hover:text-white hover:scale-110 transition-all duration-300 text-xl">
+                    <a href="https://www.linkedin.com/in/noyiadahnuthewriter" target="_blank" rel="noopener noreferrer" class="text-primary/80 hover:text-white hover:scale-110 transition-all duration-300 text-xl" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="#" class="text-primary/80 hover:text-white hover:scale-110 transition-all duration-300 text-xl">
+                    <a href="#" class="text-primary/80 hover:text-white hover:scale-110 transition-all duration-300 text-xl" aria-label="Twitter">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="#" class="text-primary/80 hover:text-white hover:scale-110 transition-all duration-300 text-xl">
+                    <a href="#" class="text-primary/80 hover:text-white hover:scale-110 transition-all duration-300 text-xl" aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
@@ -620,30 +670,30 @@
             <div class="border-t border-primary/20 mt-8 pt-8">
                 <div class="flex justify-center items-center gap-4 mb-4">
                     <!-- Additional Social Icons -->
-                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="text-primary/60 hover:text-accent transition-colors duration-300">
+                    <a href="https://www.linkedin.com/in/noyiadahnuthewriter" target="_blank" rel="noopener noreferrer" class="text-primary/60 hover:text-accent transition-colors duration-300" aria-label="LinkedIn">
                         <i class="fab fa-linkedin-in text-lg"></i>
                     </a>
-                    <a href="#" class="text-primary/60 hover:text-accent transition-colors duration-300">
+                    <a href="#" class="text-primary/60 hover:text-accent transition-colors duration-300" aria-label="Twitter">
                         <i class="fab fa-twitter text-lg"></i>
                     </a>
-                    <a href="#" class="text-primary/60 hover:text-accent transition-colors duration-300">
+                    <a href="#" class="text-primary/60 hover:text-accent transition-colors duration-300" aria-label="Instagram">
                         <i class="fab fa-instagram text-lg"></i>
                     </a>
                 </div>
                 
                 <div class="text-primary/60 text-sm mb-2 text-center">
-                    &copy; 2025 Noyi Adahnu. All rights reserved.
+                    &copy; <span id="current-year">2025</span> Noyi Adahnu. All rights reserved.
                 </div>
                 
                 <div class="text-primary/80 text-sm font-medium text-center">
                     Designed and Developed by 
-                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="text-accent hover:text-white transition-colors duration-300 inline-flex items-center">
+                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-white transition-colors duration-300 inline-flex items-center">
                         <i class="fab fa-linkedin-in mr-1 ml-2"></i> Esa Kris
                     </a>
                 </div>
                 
                 <!-- Floral decoration -->
-                <div class="flex justify-center mt-4 text-primary/40">
+                <div class="flex justify-center mt-4 text-primary/40" aria-hidden="true">
                     <i class="fas fa-leaf text-xs rotate-45 mx-1"></i>
                     <i class="fas fa-spa text-xs mx-1"></i>
                     <i class="fas fa-leaf text-xs -rotate-45 mx-1"></i>
@@ -677,6 +727,9 @@
             alert('Thank you for your message! I will get back to you soon.');
             contactForm.reset();
         });
+
+        // Update copyright year automatically
+        document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
