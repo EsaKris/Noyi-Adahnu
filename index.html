@@ -29,8 +29,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5d2e46">
-    <meta name="msapplication-TileColor" content="#5d2e46">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2563eb">
+    <meta name="msapplication-TileColor" content="#2563eb">
     <meta name="theme-color" content="#ffffff">
     
     <!-- Canonical URL -->
@@ -64,11 +64,13 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#F8D7E6',
-                        secondary: '#E2B4C5',
-                        accent: '#C87EA0',
-                        dark: '#5D2E46',
-                        light: '#FFF5F9',
+                        primary: '#1e40af',
+                        secondary: '#1e3a8a',
+                        accent: '#2563eb',
+                        dark: '#0f172a',
+                        light: '#f8fafc',
+                        navy: '#1e3a8a',
+                        sky: '#0ea5e9',
                     },
                     fontFamily: {
                         heading: ['Playfair Display', 'serif'],
@@ -82,31 +84,31 @@
     <style type="text/tailwindcss">
         @layer utilities {
             .text-gradient {
-                @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-dark;
+                @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-primary;
             }
             .section-title {
                 @apply text-3xl font-heading font-bold mb-8 text-dark relative inline-block;
             }
             .section-title:after {
                 content: '';
-                @apply absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-accent;
+                @apply absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-sky to-primary;
                 height: 2px;
             }
             .floral-divider {
                 @apply text-center my-12 text-accent opacity-60;
             }
             .service-card {
-                @apply bg-light p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-primary/20;
+                @apply bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200;
             }
             .skill-pill {
-                @apply bg-primary/30 text-dark px-4 py-2 rounded-full text-sm font-medium;
+                @apply bg-blue-100 text-primary px-4 py-2 rounded-full text-sm font-medium;
             }
         }
     </style>
 </head>
 <body class="bg-white font-body text-dark/90">
     <!-- Navbar -->
-    <nav class="fixed top-0 left-0 w-full bg-white/70 backdrop-blur-md shadow-md z-50">
+    <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-md z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <!-- Logo with semantic h1 for SEO -->
             <a href="#" class="text-dark font-heading text-2xl font-bold">
@@ -132,16 +134,16 @@
     <!-- Mobile Menu (hidden by default) -->
     <div id="mobile-menu" class="md:hidden hidden fixed inset-0 z-40 bg-white/95 backdrop-blur-sm pt-20">
         <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
-            <a href="#about" class="hover:text-accent transition-colors py-2 border-b border-primary/10">About</a>
-            <a href="#skills" class="hover:text-accent transition-colors py-2 border-b border-primary/10">Skills</a>
-            <a href="#services" class="hover:text-accent transition-colors py-2 border-b border-primary/10">Services</a>
-            <a href="#work" class="hover:text-accent transition-colors py-2 border-b border-primary/10">Work</a>
+            <a href="#about" class="hover:text-accent transition-colors py-2 border-b border-gray-100">About</a>
+            <a href="#skills" class="hover:text-accent transition-colors py-2 border-b border-gray-100">Skills</a>
+            <a href="#services" class="hover:text-accent transition-colors py-2 border-b border-gray-100">Services</a>
+            <a href="#work" class="hover:text-accent transition-colors py-2 border-b border-gray-100">Work</a>
             <a href="#contact" class="hover:text-accent transition-colors py-2">Contact</a>
         </div>
     </div>
 
     <!-- Hero Section -->
-    <header class="relative bg-gradient-to-br from-primary/20 to-light min-h-[80vh] flex items-center overflow-hidden mt-16">
+    <header class="relative bg-gradient-to-br from-blue-50 to-white min-h-[80vh] flex items-center overflow-hidden mt-16">
         <!-- Decorative background elements -->
         <div class="absolute top-0 left-0 w-full h-full opacity-10" aria-hidden="true">
             <div class="absolute top-10 left-20 text-accent/30 text-9xl"><i class="fas fa-feather-alt"></i></div>
@@ -157,8 +159,8 @@
                     <h3 class="text-2xl md:text-3xl font-heading italic mb-6 text-dark/80">Writing with Purpose, <span class="text-gradient">Strategizing for Impact</span></h3>
                     <p class="text-lg mb-8 max-w-lg mx-auto lg:mx-0">Helping businesses turn ideas into impact through strategic, engaging content that connects with audiences and drives results.</p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="#contact" class="bg-accent hover:bg-dark text-white px-6 py-3 rounded-full font-medium transition-all">Let's Connect</a>
-                        <a href="#work" class="border-2 border-accent text-accent hover:bg-accent/10 px-6 py-3 rounded-full font-medium transition-all">View My Work</a>
+                        <a href="#contact" class="bg-accent hover:bg-primary text-white px-6 py-3 rounded-full font-medium transition-all">Let's Connect</a>
+                        <a href="#work" class="border-2 border-accent text-accent hover:bg-blue-50 px-6 py-3 rounded-full font-medium transition-all">View My Work</a>
                     </div>
                 </div>
                 
@@ -174,7 +176,7 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-light">
+    <section id="about" class="py-20 bg-blue-50">
         <div class="container mx-auto px-6">
             <h2 class="section-title">About Me</h2>
             
@@ -266,7 +268,7 @@
     </div>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 bg-light">
+    <section id="services" class="py-20 bg-blue-50">
         <div class="container mx-auto px-6">
             <h2 class="section-title">My Services</h2>
             
@@ -354,7 +356,7 @@
             <p class="text-xl max-w-3xl mx-auto text-center mb-12">You're not just hiring a writer—you're gaining a partner who's invested in your brand's growth. Here's what I bring to every project:</p>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-primary/10 p-6 rounded-lg border border-primary/20">
+                <div class="bg-blue-50 p-6 rounded-lg border border-gray-200">
                     <div class="text-accent text-2xl mb-3">
                         <i class="fas fa-pen-nib" aria-hidden="true"></i>
                     </div>
@@ -362,7 +364,7 @@
                     <p>Easy to read, on-brand, and tailored to your goals</p>
                 </div>
                 
-                <div class="bg-primary/10 p-6 rounded-lg border border-primary/20">
+                <div class="bg-blue-50 p-6 rounded-lg border border-gray-200">
                     <div class="text-accent text-2xl mb-3">
                         <i class="fas fa-search" aria-hidden="true"></i>
                     </div>
@@ -370,7 +372,7 @@
                     <p>Adds credibility and connects with your target audience</p>
                 </div>
                 
-                <div class="bg-primary/10 p-6 rounded-lg border border-primary/20">
+                <div class="bg-blue-50 p-6 rounded-lg border border-gray-200">
                     <div class="text-accent text-2xl mb-3">
                         <i class="fas fa-bullseye" aria-hidden="true"></i>
                     </div>
@@ -378,7 +380,7 @@
                     <p>In messaging across blogs, websites, emails, and social posts</p>
                 </div>
                 
-                <div class="bg-primary/10 p-6 rounded-lg border border-primary/20">
+                <div class="bg-blue-50 p-6 rounded-lg border border-gray-200">
                     <div class="text-accent text-2xl mb-3">
                         <i class="fas fa-tasks" aria-hidden="true"></i>
                     </div>
@@ -386,7 +388,7 @@
                     <p>Organized workflow with clear communication and timely delivery</p>
                 </div>
                 
-                <div class="bg-primary/10 p-6 rounded-lg border border-primary/20">
+                <div class="bg-blue-50 p-6 rounded-lg border border-gray-200">
                     <div class="text-accent text-2xl mb-3">
                         <i class="fas fa-lightbulb" aria-hidden="true"></i>
                     </div>
@@ -394,7 +396,7 @@
                     <p>Content planning, idea development, and editorial structure</p>
                 </div>
                 
-                <div class="bg-primary/10 p-6 rounded-lg border border-primary/20">
+                <div class="bg-blue-50 p-6 rounded-lg border border-gray-200">
                     <div class="text-accent text-2xl mb-3">
                         <i class="fas fa-hands-helping" aria-hidden="true"></i>
                     </div>
@@ -403,14 +405,14 @@
                 </div>
             </div>
             
-            <div class="mt-12 bg-gradient-to-r from-primary to-accent/10 p-8 rounded-lg border border-accent/20">
-                <p class="text-xl font-heading italic text-center">My goal is always the same: to help you build trust, speak with purpose, and grow with content that works.</p>
+            <div class="mt-12 bg-gradient-to-r from-primary to-blue-100 p-8 rounded-lg border border-accent/20">
+                <p class="text-xl font-heading italic text-center text-white">My goal is always the same: to help you build trust, speak with purpose, and grow with content that works.</p>
             </div>
         </div>
     </section>
 
     <!-- Work Samples Section -->
-    <section id="work" class="py-20 bg-light">
+    <section id="work" class="py-20 bg-blue-50">
         <div class="container mx-auto px-6">
             <h2 class="section-title">Writing Samples</h2>
             
@@ -472,7 +474,7 @@
                 </article>
             </div>
             
-            <div class="mt-12 bg-white p-8 rounded-lg shadow-md border border-primary/20">
+            <div class="mt-12 bg-white p-8 rounded-lg shadow-md border border-gray-200">
                 <h3 class="font-heading text-2xl font-bold mb-4 text-dark">Content Calendar Sample</h3>
                 <p class="mb-4">For a client preparing to launch, I built a 30-day content calendar covering blog topics, product content, and social media. It gave the client a clear roadmap, helped them stay consistent, and saved time across their team.</p>
                 <p class="font-medium">I work with tools like Google Docs, Google Trends, Google Analytics, Grammarly, Canva, Trello, and Google Sheets depending on what works best for your workflow.</p>
@@ -572,13 +574,13 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-light">
+    <section id="contact" class="py-20 bg-blue-50">
         <div class="container mx-auto px-6">
             <h2 class="section-title">Let's Connect</h2>
             
             <p class="text-xl max-w-3xl mx-auto text-center mb-12">If you need content that's purposeful, clear, and handled professionally from start to finish—I'd love to work with you.</p>
             
-            <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md border border-primary/20">
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md border border-gray-200">
                 <div class="grid md:grid-cols-2 gap-8">
                     <div>
                         <h3 class="font-heading text-xl font-bold mb-4">Contact Information</h3>
@@ -622,20 +624,20 @@
                         <form id="contact-form" class="space-y-4">
                             <div>
                                 <label for="name" class="block text-sm font-medium mb-1">Your Name</label>
-                                <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded-lg border border-primary/30 focus:border-accent focus:ring-1 focus:ring-accent/50 transition-all">
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:border-accent focus:ring-1 focus:ring-accent/50 transition-all">
                             </div>
                             
                             <div>
                                 <label for="email" class="block text-sm font-medium mb-1">Email Address</label>
-                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded-lg border border-primary/30 focus:border-accent focus:ring-1 focus:ring-accent/50 transition-all">
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:border-accent focus:ring-1 focus:ring-accent/50 transition-all">
                             </div>
                             
                             <div>
                                 <label for="message" class="block text-sm font-medium mb-1">Message</label>
-                                <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 rounded-lg border border-primary/30 focus:border-accent focus:ring-1 focus:ring-accent/50 transition-all"></textarea>
+                                <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:border-accent focus:ring-1 focus:ring-accent/50 transition-all"></textarea>
                             </div>
                             
-                            <button type="submit" class="bg-accent hover:bg-dark text-white px-6 py-3 rounded-full font-medium transition-all w-full">
+                            <button type="submit" class="bg-accent hover:bg-primary text-white px-6 py-3 rounded-full font-medium transition-all w-full">
                                 Send Message
                             </button>
                         </form>
@@ -651,41 +653,41 @@
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-6 md:mb-0">
                     <div class="text-2xl font-heading font-bold mb-2">Noyi Adahnu</div>
-                    <div class="text-primary/80">Professional Writer & Content Strategist</div>
+                    <div class="text-blue-200">Professional Writer & Content Strategist</div>
                 </div>
                 
                 <div class="flex gap-6">
-                    <a href="https://www.linkedin.com/in/noyiadahnuthewriter" target="_blank" rel="noopener noreferrer" class="text-primary/80 hover:text-white hover:scale-110 transition-all duration-300 text-xl" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/noyiadahnuthewriter" target="_blank" rel="noopener noreferrer" class="text-blue-200 hover:text-white hover:scale-110 transition-all duration-300 text-xl" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="#" class="text-primary/80 hover:text-white hover:scale-110 transition-all duration-300 text-xl" aria-label="Twitter">
+                    <a href="#" class="text-blue-200 hover:text-white hover:scale-110 transition-all duration-300 text-xl" aria-label="Twitter">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="#" class="text-primary/80 hover:text-white hover:scale-110 transition-all duration-300 text-xl" aria-label="Instagram">
+                    <a href="#" class="text-blue-200 hover:text-white hover:scale-110 transition-all duration-300 text-xl" aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
             </div>
             
-            <div class="border-t border-primary/20 mt-8 pt-8">
+            <div class="border-t border-blue-800 mt-8 pt-8">
                 <div class="flex justify-center items-center gap-4 mb-4">
                     <!-- Additional Social Icons -->
-                    <a href="https://www.linkedin.com/in/noyiadahnuthewriter" target="_blank" rel="noopener noreferrer" class="text-primary/60 hover:text-accent transition-colors duration-300" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/noyiadahnuthewriter" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:text-accent transition-colors duration-300" aria-label="LinkedIn">
                         <i class="fab fa-linkedin-in text-lg"></i>
                     </a>
-                    <a href="#" class="text-primary/60 hover:text-accent transition-colors duration-300" aria-label="Twitter">
+                    <a href="#" class="text-blue-300 hover:text-accent transition-colors duration-300" aria-label="Twitter">
                         <i class="fab fa-twitter text-lg"></i>
                     </a>
-                    <a href="#" class="text-primary/60 hover:text-accent transition-colors duration-300" aria-label="Instagram">
+                    <a href="#" class="text-blue-300 hover:text-accent transition-colors duration-300" aria-label="Instagram">
                         <i class="fab fa-instagram text-lg"></i>
                     </a>
                 </div>
                 
-                <div class="text-primary/60 text-sm mb-2 text-center">
+                <div class="text-blue-300 text-sm mb-2 text-center">
                     &copy; <span id="current-year">2025</span> Noyi Adahnu. All rights reserved.
                 </div>
                 
-                <div class="text-primary/80 text-sm font-medium text-center">
+                <div class="text-blue-200 text-sm font-medium text-center">
                     Designed and Developed by 
                     <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-white transition-colors duration-300 inline-flex items-center">
                         <i class="fab fa-linkedin-in mr-1 ml-2"></i> Esa Kris
@@ -693,7 +695,7 @@
                 </div>
                 
                 <!-- Floral decoration -->
-                <div class="flex justify-center mt-4 text-primary/40" aria-hidden="true">
+                <div class="flex justify-center mt-4 text-blue-400" aria-hidden="true">
                     <i class="fas fa-leaf text-xs rotate-45 mx-1"></i>
                     <i class="fas fa-spa text-xs mx-1"></i>
                     <i class="fas fa-leaf text-xs -rotate-45 mx-1"></i>
